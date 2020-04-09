@@ -18,6 +18,11 @@ public class Main {
         }
 
         PasswordGenerator passwordGenerator = new PasswordGenerator(text);
+        passwordGenerator.deletePunctuationMarks();
+        passwordGenerator.changeLetters(1, 5);
+        passwordGenerator.changeOToZero();
+        passwordGenerator.changeAToAtSign();
+        passwordGenerator.replaceEvenLettersToLowerCase();
         String password = passwordGenerator.getPassword();
         System.out.println(password);
     }
